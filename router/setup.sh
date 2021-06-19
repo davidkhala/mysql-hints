@@ -32,4 +32,7 @@ firewall() {
   sudo firewall-cmd --reload
   sudo firewall-cmd --list-all
 }
+restart(){
+  sudo systemctl restart mysqlrouter.service
+}
 $@
