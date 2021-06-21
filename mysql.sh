@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -e -x
 setRootPassword() {
 	echo "targeted new password [$1]"
 	local passwordOpt="-p"
@@ -13,8 +13,6 @@ setRootPassword() {
 			passwordOpt="--password=$2"
 		fi
 	fi
-	
-	echo $passwordOpt
 	
 	sudo mysql -u root ${passwordOpt} -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$1'"
 	echo ...restart your local mysql service is required to take effect
