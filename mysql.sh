@@ -7,7 +7,7 @@ setRootPassword() {
 	
 	if [[ -n "$2" ]]; then
 		if [[ "$2" == "--init" ]]; then
-			local initPassword=$(sudo grep 'temporary password' /var/log/mysqld.log |  awk '{ print $13 }')
+			local initPassword=$(showInitRootPassword)
 			passwordOpt="--password=\"${initPassword}\""
 		else
 			passwordOpt="--password=$2"
