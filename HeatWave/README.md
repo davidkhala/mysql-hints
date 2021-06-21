@@ -13,9 +13,9 @@ https://dev.mysql.com/doc/heatwave/en/heatwave-introduction.html
     - e.g `ALTER TABLE orders MODIFY description BLOB NOT SECONDARY;`
 #### Encoding String Columns (optional)
 HeatWave supports two string column encoding types:
-    | Encoding Type	| Expression, Filter, Function, and Operator Support|	Best Suited To |	Space Required On |
-    | ----          | ----                                              | ----          | ----                |
-    | Variable-length (VARLEN) |	Supports JOIN operations, string functions and operators, and LIKE predicates. | Columns with a high number of distinct values | HeatWave nodes |
+| Encoding Type	| Expression, Filter, Function, and Operator Support|	Best Suited To |	Space Required On |
+| ----          | ----                                              | ----          | ----                |
+| Variable-length (VARLEN) |	Supports JOIN operations, string functions and operators, and LIKE predicates. | Columns with a high number of distinct values | HeatWave nodes |
 | Dictionary (SORTED) |	Does not support JOIN operations, string functions and operators, or LIKE predicates.| Columns with a low number of distinct values	| MySQL node |
         
 - When loaded, VARLEN is applied to CHAR, VARCHAR, and TEXT-type columns by default
