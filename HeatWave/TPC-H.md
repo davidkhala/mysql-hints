@@ -21,7 +21,7 @@ util.importTable("https://objectstorage.us-ashburn-1.oraclecloud.com/n/idazzjlcj
 
 util.importTable("https://objectstorage.us-ashburn-1.oraclecloud.com/n/idazzjlcjqzj/b/bucket-20201125-1020/o/tpch%2Fregion.tbl", { schema:"tpch", table:"region", fieldsTerminatedBy:"|", bytesPerChunk:"100M", threads:16, skipRows:1}) 
 
-util.importTable("https://objectstorage.us-ashburn-1.oraclecloud.com/n/idazzjlcjqzj/b/bucket-20201125-1020/o/tpch%2Fsupplier.tbl", { schema:"tpch", table:"supplier",
+util.importTable("https://objectstorage.us-ashburn-1.oraclecloud.com/n/idazzjlcjqzj/b/bucket-20201125-1020/o/tpch%2Fsupplier.tbl", { schema:"tpch", table:"supplier", fieldsTerminatedBy:"|", bytesPerChunk:"100M", threads:16, skipRows:1})
 ## Why not MySQL Workbench
 - Workbench can only support either CSV or JSON file type, but not .tbl files
 - Workbench do not have JS mode 
