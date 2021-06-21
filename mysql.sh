@@ -8,7 +8,7 @@ setRootPassword() {
 	if [[ -n "$2" ]]; then
 		if [[ "$2" == "--init" ]]; then
 			local initPassword=$(showInitRootPassword)
-			passwordOpt="--password=${initPassword}"
+			passwordOpt="--password=${initPassword} --connect-expired-password"
 		else
 			passwordOpt="--password=$2"
 		fi
