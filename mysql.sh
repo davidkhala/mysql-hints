@@ -3,10 +3,12 @@ set -e
 setRootPassword() {
 	echo "targeted new password [$1]"
 	local passwordOpt="-p"
-
+	
+	
 	if [[ -n "$2" ]]; then
 		if [[ "$2" == "--init" ]]; then
-			passwordOpt=""
+			local initPassword=$(sudo grep 'temporary password' /var/log/mysqld.log |  awk '{ print $13 }')
+			passwordOpt="--password=\"${initPassword}\""
 		else
 			passwordOpt="--password=$2"
 		fi
@@ -14,7 +16,7 @@ setRootPassword() {
 
 	sudo mysql -u root ${passwordOpt} -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$1'"
 	echo ...restart your local mysql service is required to take effect
-	sudo systemctl restart mysql
+	sudo systemctl restart mysqld
 }
 showInitRootPassword(){
 	sudo grep 'temporary password' /var/log/mysqld.log |  awk '{ print $13 }'
