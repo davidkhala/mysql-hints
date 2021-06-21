@@ -19,5 +19,5 @@ util.importTable("https://objectstorage.us-ashburn-1.oraclecloud.com/n/idazzjlcj
 
 util.importTable("https://objectstorage.us-ashburn-1.oraclecloud.com/n/idazzjlcjqzj/b/bucket-20201125-1020/o/tpch%2Fsupplier.tbl", { schema:"tpch", table:"supplier",
 ## Why not MySQL Workbench
-- Workbench can only support either CSV or JSON file type, you have to rename .tbl files
+- Workbench can only support either CSV or JSON file type, but not .tbl files
 - Workbench do not have JS mode 
