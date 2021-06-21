@@ -4,7 +4,8 @@
     - `MySQL <domain>:3306 ssl SQL >\js`
     - MySQL Shell is `mysqlsh` not `mysql`
     - MySQL Shell JS mode is default
-1. [Import the table data into MySQL Database Service from an external OCI Object Storage](importTables.js)
+1. Import the table data into MySQL Database Service from an external OCI Object Storage
+    - curl https://raw.githubusercontent.com/davidkhala/mysql-toolset/main/HeatWave/importTables.js | mysqlsh --uri <user>@<domain>:3306
 
 
 ## Why not MySQL Workbench
