@@ -13,7 +13,9 @@ setRootPassword() {
 			passwordOpt="--password=$2"
 		fi
 	fi
-
+	
+	echo $passwordOpt
+	
 	sudo mysql -u root ${passwordOpt} -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$1'"
 	echo ...restart your local mysql service is required to take effect
 	sudo systemctl restart mysqld
