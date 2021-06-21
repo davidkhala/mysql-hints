@@ -16,6 +16,9 @@ setRootPassword() {
 	echo ...restart your local mysql service is required to take effect
 	sudo systemctl restart mysql
 }
+showInitRootPassword(){
+	sudo grep 'temporary password' /var/log/mysqld.log
+}
 connectionPoolSize() {
 	sudo mysql -u root -p -e 'SHOW VARIABLES LIKE "max_connections"'
 }
