@@ -9,5 +9,5 @@
 
 
 ## Why not MySQL Workbench
-- Workbench can only support either CSV or JSON file type, but not .tbl files
-- Workbench do not have JS mode 
+- Workbench can only support either CSV or JSON file type, but not .tbl files. `.tbl` is the output format of TPC-H dbgen
+
