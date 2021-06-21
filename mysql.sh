@@ -17,7 +17,7 @@ setRootPassword() {
 	sudo systemctl restart mysql
 }
 showInitRootPassword(){
-	sudo grep 'temporary password' /var/log/mysqld.log
+	sudo grep 'temporary password' /var/log/mysqld.log |  awk '{ print $13 }'
 }
 connectionPoolSize() {
 	sudo mysql -u root -p -e 'SHOW VARIABLES LIKE "max_connections"'
