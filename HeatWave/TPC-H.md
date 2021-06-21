@@ -1,7 +1,7 @@
 # Use TPC-H as benchmark for HeatWave
 
 1. On MySQL Shell, switch to JavaScript mode
-  - `MySQL <domain>:3306 ssl SQL >\js`
+    - `MySQL <domain>:3306 ssl SQL >\js`
 1. Import the table data into MySQL Database Service from an external OCI Object Storage
 util.importTable("https://objectstorage.us-ashburn-1.oraclecloud.com/n/idazzjlcjqzj/b/bucket-20201125-1020/o/tpch%2Fnation.tbl", { schema:"tpch", table:"nation", fieldsTerminatedBy:"|", bytesPerChunk:"100M", threads:16, skipRows:1}) 
 
