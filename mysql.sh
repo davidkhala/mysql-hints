@@ -13,7 +13,7 @@ setRootPassword() {
 	fi
 
 	sudo mysql -u root ${passwordOpt} -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$1'"
-	sudo systemctl restart mysql
+	echo ...restart your local mysql service is required to take effect
 }
 connectionPoolSize() {
 	sudo mysql -u root -p -e 'SHOW VARIABLES LIKE "max_connections"'
