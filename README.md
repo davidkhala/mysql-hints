@@ -1,1 +1,1 @@
-# mysql-hints
+# MySQL toolset
