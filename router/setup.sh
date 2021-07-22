@@ -35,4 +35,7 @@ firewall() {
 restart(){
   sudo systemctl restart mysqlrouter.service
 }
+view-config(){
+  cat /etc/mysqlrouter/mysqlrouter.conf
+}
 $@
