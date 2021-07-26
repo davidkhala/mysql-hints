@@ -5,11 +5,14 @@
     ```
     curl https://raw.githubusercontent.com/oracle/heatwave-tpch/main/TPCH/create_tables.sql | mysqlsh --sql --uri <user>@<domain>:3306
     ```
-4. Import the table data into MySQL Database Service from an external OCI Object Storage
+1. Import the table data into MySQL Database Service from an external OCI Object Storage
     ```
     curl https://raw.githubusercontent.com/davidkhala/mysql-toolset/main/HeatWave/importTables.js | mysqlsh --uri <user>@<domain>:3306
     ```
-
+1. Run secondary_load.sql to configure and load data to HeatWave cluster
+    ```
+    curl https://raw.githubusercontent.com/davidkhala/heatwave-tpch/main/HeatWave/secondary_load.sql | mysqlsh -uri <user>@<domain>:3306
+    ```
 
 ## Why not MySQL Workbench
 - Workbench can only support either CSV or JSON file type, but not .tbl files. `.tbl` is the output format of TPC-H dbgen
