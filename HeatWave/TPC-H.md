@@ -17,3 +17,5 @@
 ## Why not MySQL Workbench
 - Workbench can only support either CSV or JSON file type, but not .tbl files. `.tbl` is the output format of TPC-H dbgen
 
+## Optimizaing Perfomance
+- [hq5](https://github.com/oracle/heatwave-tpch/blob/main/TPCH/hq5.sql) is one best suited for Heatwave optimizing. It can reach 300x query acceleration. 
