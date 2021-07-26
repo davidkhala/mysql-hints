@@ -19,4 +19,6 @@
 
 # TPC-H sample queries
 - [hq5](https://github.com/oracle/heatwave-tpch/blob/main/TPCH/hq5.sql) is one best suited for Heatwave optimizing. It can reach 300x query acceleration. 
-- Change this annotation to toggle heatwave using, `/*+ set_var(use_secondary_engine=ON) */ ` or `/*+ set_var(use_secondary_engine=OFF) */ `
+- Change this annotation to toggle heatwave using, 
+        - `/*+ set_var(use_secondary_engine=ON) */ ` , or 
+        - `/*+ set_var(use_secondary_engine=OFF) */ `
