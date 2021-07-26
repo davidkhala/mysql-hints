@@ -11,7 +11,7 @@
     ```
 1. Run secondary_load.sql to configure and load data to HeatWave cluster
     ```
-    curl https://raw.githubusercontent.com/davidkhala/heatwave-tpch/main/HeatWave/secondary_load.sql | mysqlsh -uri <user>@<domain>:3306
+    curl https://raw.githubusercontent.com/oracle/heatwave-tpch/main/HeatWave/secondary_load.sql | mysqlsh -uri <user>@<domain>:3306
     ```
 
 ## Why not MySQL Workbench
