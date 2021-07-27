@@ -44,4 +44,5 @@ specify the SECONDARY_LOAD option in an ALTER TABLE statement. `ALTER TABLE orde
 1. Load time is affected if the primary key contains more than one column, or if the primary key column is not an INTEGER column. 
 1. After a table is loaded, changes to a table's data on the MySQL DB System node are automatically propagated to the HeatWave nodes. No user action is required to keep data synchronized. 
 1. DDL operations are not permitted on tables that are loaded into the HeatWave cluster.
+    - Which indicate change table definition is not allowed before table unloaded from heatwave  
 
