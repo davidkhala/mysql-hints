@@ -6,7 +6,13 @@ Fedora: `sudo yum install -y mysql-shell`
  
 Debian (python and sql dialets only): `sudo snap install mysql-shell`
 
-Debian (js and sql dialets): TODO
+Debian (js and sql dialets):
+```
+wget https://repo.mysql.com/mysql-apt-config_0.8.18-1_all.deb
+sudo apt-get install ./mysql-apt-config_0.8.18-1_all.deb
+rm mysql-apt-config_0.8.18-1_all.deb
+
+```
 
 ## Common Sense
 - MySQL Shell is `mysqlsh` not `mysql`
