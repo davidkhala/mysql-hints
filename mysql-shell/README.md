@@ -18,7 +18,7 @@ sudo apt-get install -y mysql-shell
 
 ## Tips
 - MySQL Shell is `mysqlsh` not `mysql`
-- MySQL Shell is default to JS|python mode
+- MySQL Shell is default to JS / Python mode
 - command tips 
     - switch among JS mode and SQL mode: `\js` or `\sql`
     - Quit: `\exit`
