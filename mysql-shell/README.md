@@ -4,9 +4,9 @@
 
 Fedora :  `sudo yum install -y mysql-shell` 
 
-Debian : `sudo snap install mysql-shell`
+Debian for python : `sudo snap install mysql-shell`
 
-Debian :
+Debian for js:
 
 ```
 wget https://repo.mysql.com/mysql-apt-config_0.8.18-1_all.deb
