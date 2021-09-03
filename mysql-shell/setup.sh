@@ -1,4 +1,4 @@
-install(){
+debian-install(){
   wget https://repo.mysql.com/mysql-apt-config_0.8.18-1_all.deb
   sudo apt-get install ./mysql-apt-config_0.8.18-1_all.deb
   rm mysql-apt-config_0.8.18-1_all.deb
