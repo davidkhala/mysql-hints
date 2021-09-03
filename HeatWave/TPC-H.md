@@ -1,17 +1,18 @@
 # Use TPC-H as benchmark for HeatWave
+0. for each below step, set `$user` and `$domain` in env
 1. create the DB schema `tpch_1024` and tables with:
     - https://github.com/oracle/heatwave-tpch/blob/main/TPCH/create_tables.sql
     - Or powered by **mysql-shell** 
     ```
-    curl https://raw.githubusercontent.com/oracle/heatwave-tpch/main/TPCH/create_tables.sql | mysqlsh --sql --uri <user>@<domain>:3306
+    curl https://raw.githubusercontent.com/oracle/heatwave-tpch/main/TPCH/create_tables.sql | mysqlsh --sql --uri $user@$domain:3306
     ```
 1. Import the table data into MySQL Database Service from an external OCI Object Storage
     ```
-    curl https://raw.githubusercontent.com/davidkhala/mysql-toolset/main/HeatWave/importTables.js | mysqlsh --uri <user>@<domain>:3306
+    curl https://raw.githubusercontent.com/davidkhala/mysql-toolset/main/HeatWave/importTables.js | mysqlsh --uri $user@$domain:3306
     ```
 1. Run secondary_load.sql to configure and load data to HeatWave cluster
     ```
-    curl https://raw.githubusercontent.com/oracle/heatwave-tpch/main/HeatWave/secondary_load.sql | mysqlsh -uri <user>@<domain>:3306
+    curl https://raw.githubusercontent.com/oracle/heatwave-tpch/main/HeatWave/secondary_load.sql | mysqlsh -uri $user@$domain:3306
     ```
 
 ## Why not MySQL Workbench
