@@ -6,7 +6,10 @@ Fedora :  `sudo yum install -y mysql-shell`
 
 Debian for python : `sudo snap install mysql-shell`
 
-Debian for js: curl https://raw.githubusercontent.com/davidkhala/mysql-toolset/main/mysql-shell/setup.sh | bash -s debian-install
+Debian for js: 
+```
+curl https://raw.githubusercontent.com/davidkhala/mysql-toolset/main/mysql-shell/setup.sh | bash -s debian-install
+```
 
 ## Tips
 - MySQL Shell is `mysqlsh` not `mysql`
