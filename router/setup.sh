@@ -7,6 +7,9 @@ config() {
   local privateEndpoint=$1
 
   sudo tee -a /etc/mysqlrouter/mysqlrouter.conf <<EOF
+  # Exposes http://127.0.0.1:8081
+  [http_server]
+
   [routing:redirect_classic]
   bind_address = 0.0.0.0:3306
   destinations = ${privateEndpoint}:3306
