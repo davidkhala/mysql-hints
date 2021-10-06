@@ -1,0 +1,1 @@
+mysqladmin ping $1
