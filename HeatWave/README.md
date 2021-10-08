@@ -4,6 +4,9 @@ https://dev.mysql.com/doc/heatwave/en/heatwave-introduction.html
 - HeatWave supports a maximum of 470 columns per table.
 - Clients and applications do not connect to the HeatWave cluster directly. Queries that meet certain prerequisites are automatically offloaded from the MySQL DB System to the HeatWave cluster for accelerated processing
 
+## Limitation
+- Unsupported SQL function
+    - `timediff`
 ## Load table
 ### Prepare
 - The tables accessed by the queries you intend to run must be loaded into the HeatWave cluster
