@@ -17,3 +17,5 @@ curl https://raw.githubusercontent.com/davidkhala/mysql-toolset/main/mysql-shell
 - command tips 
     - switch among JS mode and SQL mode: `\js` or `\sql`
     - Quit: `\exit`
+## util.importTable
+https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-parallel-table.html
