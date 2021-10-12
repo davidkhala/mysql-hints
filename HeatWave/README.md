@@ -6,7 +6,8 @@ https://dev.mysql.com/doc/heatwave/en/heatwave-introduction.html
 
 ## [Limitation](https://dev.mysql.com/doc/heatwave/en/heatwave-limitations.html)
 - Unsupported SQL function
-    - `timediff`
+    - `timediff()`
+    - `DIV`
 ## Load table
 ### Prepare
 - The tables accessed by the queries you intend to run must be loaded into the HeatWave cluster
