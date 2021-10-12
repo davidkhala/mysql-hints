@@ -50,3 +50,6 @@ String data types:
 - VARCHAR
 - TEXT-types including TEXT, TINYTEXT, MEDIUMTEXT, and LONGTEXT.
 - ENUM (not full support)
+## Unsupported Charset
+The `gb18030_chinese_ci` character set and collation.
+
