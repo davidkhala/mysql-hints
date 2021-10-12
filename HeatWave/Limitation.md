@@ -49,4 +49,4 @@ String data types:
 - CHAR
 - VARCHAR
 - TEXT-types including TEXT, TINYTEXT, MEDIUMTEXT, and LONGTEXT.
-- ENUM
+- ENUM (not full support)
