@@ -8,3 +8,8 @@
     where command_type='Query'
     ;
     ```
+
+To Truncate
+```
+truncate mysql.general_log;
+```
