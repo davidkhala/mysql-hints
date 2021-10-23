@@ -13,3 +13,7 @@ To Truncate
 ```
 truncate mysql.general_log;
 ```
+
+## Q: multiplexing 
+- MySQL sessions are not multiplexing - they cannot execute multiple commands at the same time. If you need to execute multiple commands with MySQL at the same time, you need multiple sessions
+- So, any execution scheduling system must strictly serialize its own access to that session, if it stick to reuse same session.
