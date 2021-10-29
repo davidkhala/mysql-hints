@@ -1,8 +1,5 @@
 set -e
-install() {
-  
-  sudo yum -y install mysql-router-community
-}
+
 config() {
   local privateEndpoint=$1
 
