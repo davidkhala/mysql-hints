@@ -22,9 +22,8 @@ EOF
 
 }
 service() {
-  sudo systemctl start mysqlrouter.service
-  sudo systemctl status mysqlrouter.service
-  sudo systemctl enable mysqlrouter.service
+  sudo systemctl enable --now mysqlrouter.service
+  systemctl status mysqlrouter.service
 }
 firewall() {
   sudo firewall-cmd --permanent --add-port=3306/tcp
