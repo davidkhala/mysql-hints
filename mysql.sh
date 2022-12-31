@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-set -e -x
-setRootPassword() {
+set -e
+set-root-password() {
 	echo "targeted new password [$1]"
 	local passwordOpt="-p"
 
@@ -17,10 +17,10 @@ setRootPassword() {
 	echo ...restart your local mysql service is required to take effect
 	sudo systemctl restart mysql
 }
-showInitRootPassword() {
+show-init-root-password() {
 	sudo grep 'temporary password' /var/log/mysqld.log | awk '{ print $13 }'
 }
-connectionPoolSize() {
+connection-pool-size() {
 	sudo mysql -u root -p -e 'SHOW VARIABLES LIKE "max_connections"'
 }
 jdbc-from() {
