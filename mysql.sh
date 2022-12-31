@@ -15,7 +15,7 @@ setRootPassword() {
 
 	sudo mysql -u root ${passwordOpt} -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$1'"
 	echo ...restart your local mysql service is required to take effect
-	sudo systemctl restart mysqld
+	sudo systemctl restart mysql
 }
 showInitRootPassword() {
 	sudo grep 'temporary password' /var/log/mysqld.log | awk '{ print $13 }'
